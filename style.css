@@ -188,3 +188,24 @@ div#game:focus {
     padding: 10px 40px;
     background-color: var(--primaryColor);
 }
+
+.result {
+    font-size: 20px;
+}
+
+.result span {
+    font-size: 24px;
+    color: var(--primaryColor);
+}
+
+.average {
+    color: var(--primaryColor)
+}
+
+.amazing {
+    color: rgb(35, 172, 35)
+}
+
+.bad {
+    color: rgb(189, 23, 23)
+}

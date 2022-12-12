@@ -57,7 +57,10 @@ function gameOver() {
     addClass(document.getElementById('game'), 'over');
     result.innerHTML = getWPM();
     const text = { 40: "You doing Great " }
-    p.innerHTML = getWPM() < 20 ? "You can do better <br> practice Here  <a href='https://www.keybr.com/'>Click</a>" : getWPM() < 50 ? "You doing Great " : "Wow " + getWPM() + " This is impressive"
+    p.innerHTML = getWPM() < 20 ?
+        "<span class='bad'>You can do better </span><br> practice Here  <a href='https://www.keybr.com/'>Click</a>" :
+        getWPM() < 50 ? "<span class='average'>You doing Great </span>You doing Great " :
+        "<span class='amazing'>Wow " + getWPM() + " This is impressive </span>"
 }
 
 function newGame() {
