@@ -11,7 +11,7 @@ const button = document.querySelector('.box button')
 const p = document.querySelector('.box p')
 button.addEventListener('click', () => {
     gameOver();
-    setTimeout(() => { location.reload() }, 2000)
+    setTimeout(() => { location.reload() }, 0)
 })
 
 function addClass(el, name) {
