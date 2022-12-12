@@ -102,7 +102,6 @@ document.getElementById("game").addEventListener("keyup", (e) => {
             const msPassed = currentTime - window.gameStart;
             const sPassed = Math.floor(msPassed / 1000);
             const sLeft = (gameTime / 1000) - sPassed;
-            console.log(sLeft);
             if (sLeft <= 0) {
                 gameOver();
                 return;
@@ -142,6 +141,8 @@ document.getElementById("game").addEventListener("keyup", (e) => {
         addClass(currentWord.nextElementSibling.firstElementChild, "current");
     }
     if (isBackspace) {
+        if (!currentWord.previousElementSibling && !currentLetter.previousElementSibling) return;
+
         if (currentLetter && isFirstLetter) {
             removeClass(currentWord, "current");
             addClass(currentWord.previousElementSibling, "current");
