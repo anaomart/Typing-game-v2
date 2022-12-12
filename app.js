@@ -6,7 +6,7 @@ const gameTime = 30 * 1000;
 window.timer = null;
 window.gameStart = null;
 const overlay = document.querySelector('.overlay')
-const result = document.querySelector('.result');
+const result = document.querySelector('.result span');
 const button = document.querySelector('.box button')
 const p = document.querySelector('.box p')
 button.addEventListener('click', () => {
@@ -55,7 +55,7 @@ function gameOver() {
     overlay.style.display = 'block'
     clearInterval(window.timer);
     addClass(document.getElementById('game'), 'over');
-    result.innerHTML = 'WPM:' + getWPM();
+    result.innerHTML = getWPM();
     const text = { 40: "You doing Great " }
     p.innerHTML = getWPM() < 20 ? "You can do better <br> practice Here  <a href='https://www.keybr.com/'>Click</a>" : getWPM() < 50 ? "You doing Great " : "Wow " + getWPM() + " This is impressive"
 }
