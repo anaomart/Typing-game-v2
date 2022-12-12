@@ -59,7 +59,7 @@ function gameOver() {
     const text = { 40: "You doing Great " }
     p.innerHTML = getWPM() < 20 ?
         "<span class='bad'>You can do better </span><br> practice Here  <a href='https://www.keybr.com/'>Click</a>" :
-        getWPM() < 50 ? "<span class='average'>You doing Great </span>You doing Great " :
+        getWPM() < 50 ? "<span class='average'>You doing Great </span>" :
         "<span class='amazing'>Wow " + getWPM() + " This is impressive </span>"
 }
 
